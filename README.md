@@ -1,12 +1,11 @@
+感谢   
+www.diandian.com   
+模版部分是从diandian.com里面拿。然后去掉一些直接用的。   
 
-感谢
-www.diandian.com
-模版部分是从diandian.com里面拿。然后去掉一些直接用的。
 
-
-数据库采用sqlite3
-blog支持mardown
-version1.0功能
+数据库采用sqlite3   
+blog支持mardown   
+version1.0功能   
 
 1. 首页分页显示
 2. 具体内容显示
