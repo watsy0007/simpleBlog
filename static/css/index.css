@@ -1,0 +1,93 @@
+<style type="text/css">
+#content #posts .post a{color:#A0A0A0}
+#content #posts .post a:hover{color:#646464}
+.jjl_title a, .jjl_link a{color:#646464 !important;}
+.jjl_title a:hover, .jjl_link a:hover{color:#A0A0A0 !important;}
+#footer{color:#A0A0A0}
+#footer a{color:#A0A0A0}
+#footer a:hover{color:#B4B4B4}
+.rich-content .edui-filter-underline{text-decoration: underline !important;}
+.rich-content .edui-filter-line-through{text-decoration: line-through !important;}
+.rich-content .edui-filter-decoration-none{text-decoration: none;}
+
+.rich-content ol li{list-style-type: decimal !important;}
+.rich-content ol.edui-filter-decimal li{list-style-type: decimal !important;}
+.rich-content ol.edui-filter-lower-alpha li{list-style-type: lower-alpha !important;}
+.rich-content ol.edui-filter-lower-roman li{list-style-type: lower-roman !important;}
+.rich-content ol.edui-filter-upper-alpha li{list-style-type: upper-alpha !important;}
+.rich-content ol.edui-filter-upper-roman li{list-style-type: upper-roman !important;}
+.rich-content ul li{list-style-type: disc !important;}
+.rich-content ul.edui-filter-disc li{list-style-type: disc !important;}
+.rich-content ul.edui-filter-square li{list-style-type: square !important;}
+.rich-content ul.edui-filter-circle li{list-style-type: circle !important;}
+.rich-content .text-img-holder {display:block;}
+
+.rich-content .edui-filter-align-center{text-align:center !important;}
+.rich-content .edui-filter-align-left{text-align:left !important;}
+.rich-content .edui-filter-align-right{text-align:right !important;}
+
+.rich-content pre {font-family: monospace; word-wrap:break-word;}
+.rich-content pre p {margin:0;}
+
+#content #posts .photo img{ margin-bottom:0px;}
+#top #nav { width:470px; height:70px; float:right;}
+#top #nav li{ margin-bottom:10px; font-size:12px; color:#8C8C8C}
+#content #posts .text img{ margin-bottom:12px;}
+#notes{ width:810px; margin:10px auto;}
+
+
+#meta{ height:auto;}
+#content #posts .post .photo-item img{border-radius: 0px 0px 0px 0px;}
+body {
+    line-height: 24px;
+    color:#646464
+}
+a{color:#A0A0A0}
+a:hover{color:#646464}
+.edui-filter-disc{ margin-left:15px;}
+.edui-filter-decimal{ margin-left:18px;}
+.jjl_title{ font-weight:500;}
+
+
+#top #title h1 {
+    width:420px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 40px;
+    color: #B4B4B4;
+    text-shadow: rgba(250,250,250,0.5) 0px 5px 6px;
+
+}
+
+/* pagination */
+.pagination a {
+    float: right;
+    display: inline;
+    margin-left:10px;
+    height:32px;
+    line-height:30px;
+    width:80px;
+    font-size:13px;
+    *font-size:12px;
+    text-align:center;
+    color:#8C8C8D;
+    background:url('http://x.libdd.com/farm1/6be030/a0c83a82/ADA67.png') 0 0 no-repeat;
+    _background:none;
+}
+.pagination a:active {
+    background-position: 0 -100px;
+}
+.pagination a:hover {
+    background-position: 0 -50px;
+}
+.pagination a.disabled,
+.pagination a.disabled:hover,
+.pagination a.disabled:active {
+    color:#ADADAD;
+    background-position: 0 -150px;
+}
+/*{CustomCSS}*/
+</style>

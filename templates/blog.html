@@ -1,0 +1,82 @@
+{% load staticfiles %}
+{% load markup %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{ blog.title }}</title>
+    <meta name="description" content="simple blog" />
+    <meta name="keywords" content="文字" />
+
+    <link rel="shortcut icon" type="image/jpeg" href="http://m3.img.libdd.com/farm3/67/4C7D35DCF460800046448885E9634F43_16_16.jpg" />
+    <link rel="apple-touch-icon" href="http://m1.img.libdd.com/farm3/228/DC631D0351779F90A9B7021045065DE4_128_128.jpg" />
+
+    <link rel="stylesheet" type="text/css" href="../static/css/109D.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/markdown.css">
+
+    <script type="text/javascript" src="../static/js/jquery-1.7-latest.js"></script>
+
+    <script type="text/javascript" src="../static/js/backtoTop.js"></script>
+</head>
+
+<body>
+
+<div id="center">
+
+    <div id="top">
+        <a href="{% url "blog_index" %}" id="title"><h1 class="shoutest">watsy's blog</h1></a>
+        <ul id="nav">
+            <a href="/about"><li>关于</li></a>
+            <a href="{% url "blog_index" %}"><li>首页</li></a>
+        </ul>
+    </div> <!-- #top -->
+
+
+
+    <div id="content">
+        <ol id="posts">
+            <li class="post text">
+                <h1 class="jjl_title">{{ blog.title }}</h1>
+                <h5>{{ blog.created_date }}</h5>
+                <br>
+
+                <div class="jjl_body">
+                    <div class="markdown">
+                        {{ blog.content|markdown:"safe" }}
+                    </div>
+                </div>
+            </li>
+
+        </ol> <!-- #posts -->
+
+        <div class="pagination">
+
+            {% if blog_next %}
+                <a class="prev " href="{% url "blog_detail" blog_next %}">
+            {% else %}
+                <a class="next disabled">
+            {% endif %}
+            下一篇
+            </a>
+            {% if blog_pre %}
+                <a class="prev " href="{% url "blog_detail" blog_pre %}">
+            {% else %}
+                <a class="next disabled">
+            {% endif %}
+            上一篇
+            </a>
+        </div>
+
+        <div id="footer">
+
+            <div class="link">Powered by <a href="http://diandian.com">watsy</a></div>
+
+        </div> <!-- #footer -->
+
+    </div> <!-- #content -->
+
+</div> <!-- #center -->
+
+</body>
+</html><!--RenderTime:'167'(Mars:'126')--><!--Host Name: hy-10-0-0-92.dd.hn-->

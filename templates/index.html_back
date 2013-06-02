@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>预览</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+<!-- 图标
+    <link rel="shortcut icon" type="image/jpeg" href="http://m3.img.libdd.com/farm3/67/4C7D35DCF460800046448885E9634F43_16_16.jpg">
+    <link rel="apple-touch-icon" href="http://m1.img.libdd.com/farm3/228/DC631D0351779F90A9B7021045065DE4_128_128.jpg">
+    <link rel="stylesheet" href="http://t.libdd.com/css/base/rich-content.css">
+    -->
+
+    <!--
+    <link rel="stylesheet" type="text/css" href="http://x.libdd.com/farm1/3711a6/d2432dfd/109D.css" />
+    -->
+    <link rel="stylesheet" type="text/css" href="../static/css/109D.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+
+    <!-- jquery
+    <script type='text/javascript' src='http://t.libdd.com/js/libs/jquery/jquery-1.7-latest.js'></script>
+    <script type="text/javascript" src="http://x.libdd.com/farm1/0b5c8a/53a0a091/6FA5E.js"></script>
+    <script src="http://x.libdd.com/farm1/3f3cd9/50aa036d/B0F37.js"></script>
+    <script type="text/javascript" src="http://x.libdd.com/farm1/3711a6/e7c542f7/8DB7F.js"></script>
+    -->
+    <script type="text/javascript" src="../static/js/jquery-1.7-latest.js"></script>
+    <script type="text/javascript" src="../static/js/jquery-lightbox-0.5.js"></script>
+    <script type="text/javascript" src="../static/js/View.js"></script>
+    <script type="text/javascript" src="../static/js/photoId.js"></script>
+
+</head>
+<body>
+
+
+    
+    <div id="center">
+
+    <div id="top">
+        <a href="http://theme-preview.diandian.com/" id="title"><h1 class="shoutest">watsy's blog</h1></a>
+        <ul id="nav">
+            <a href="/archive"><li>首页</li></a>
+            
+
+        </ul>
+    </div> <!-- #top -->
+
+
+
+    <div id="content">
+
+        <ol id="posts">
+
+                 	
+          <li class="post text">
+                       <h3 class="jjl_title"><a href="http://theme-preview.diandian.com/post/2011-05-17/875558">简洁是智慧的灵魂，冗长是肤浅的藻饰。[预览示例]</a></h3>
+            <div class="jjl_body">
+            	<p>－莎士比亚</p>
+            </div>
+          </li>
+
+
+
+
+<!--
+                   <li class="post photo">
+                <a href="http://theme-preview.diandian.com/post/2011-05-17/875550"><img src="http://m3.img.libdd.com/farm2/254/E8D93259009E3A841727884E22E431FE_500_334.jpg"  style="width:500px; height:auto;" class="image"/></a>
+                  
+                 
+                                    <div class="caption"><a href="http://theme-preview.diandian.com/post/2011-05-17/875550"><p>[预览示例]</p></a></div>
+                </li>
+                 
+    
+
+                 
+    
+                
+                
+                <li class="post photo">
+           	 <div class="photo fix" id="964f4120-806a-11e0-b5a7-3eb5d252e147" style="width:500px;">
+          <div class="photo-item"><img src="http://m3.img.libdd.com/farm2/196/86CB7CE1463B58247269A7D4C10638C4_500_338.jpg">
+          <a class="view feed-slide-hook" href="http://m1.img.libdd.com/farm2/192/3AB4EE36BCAAC98B085021F8E95571C0_500_338.PNG"  rel="964f4120-806a-11e0-b5a7-3eb5d252e147">查看大图</a>
+           </div>
+          <div class="desc">Beauty!</div>
+          <div class="photo-item"><img src="http://m1.img.libdd.com/farm2/140/E8F07E65CAD8ADBEC57DA4DB6CDFDE8C_500_644.jpg">
+          <a class="view feed-slide-hook" href="http://m1.img.libdd.com/farm2/49/00EBE9FAC5742A9F1C9A9E0AC2C19831_500_644.JPEG"  rel="964f4120-806a-11e0-b5a7-3eb5d252e147">查看大图</a>
+           </div>
+          <div class="photo-item"><img src="http://m1.img.libdd.com/farm2/159/17735C859C5EA3AF79AEBB9DCFD34E9F_500_620.jpg">
+          <a class="view feed-slide-hook" href="http://m3.img.libdd.com/farm2/86/7A57397873D1F436A9811CE92468CF56_500_620.JPEG"  rel="964f4120-806a-11e0-b5a7-3eb5d252e147">查看大图</a>
+           </div>
+          <div class="photo-item"><img src="http://m2.img.libdd.com/farm2/22/87CFF55BEF1C7998CEA5E5C8EAA60916_500_667.jpg">
+          <a class="view feed-slide-hook" href="http://m1.img.libdd.com/farm2/3/6916139B661EE052B83AC06DD9AAC803_500_667.JPEG"  rel="964f4120-806a-11e0-b5a7-3eb5d252e147">查看大图</a>
+           </div>
+          <div class="photo-item"><img src="http://m2.img.libdd.com/farm2/182/70F81F34EDA22027FEFB6415E13360B6_500_366.jpg">
+          <a class="view feed-slide-hook" href="http://m2.img.libdd.com/farm2/206/6C0A6C06C926461A1BD16F47F39302CE_500_366.JPEG"  rel="964f4120-806a-11e0-b5a7-3eb5d252e147">查看大图</a>
+           </div>
+          <div class="desc caption"><p>总有一些事情，让我们心动不已。</p></div>
+           </div>
+                                    <h2><a href="http://theme-preview.diandian.com/post/2011-05-17/875488" style="font-size:14px;">设计/美女/家居 [预览示例]</a></h2>
+                                    <div class="caption"><a href="http://theme-preview.diandian.com/post/2011-05-17/875488"><p>总有一些事情，让我们心动不已。</p></a></div>
+            </li>
+                 
+           
+
+
+-->
+
+      <li class="post audio">
+        <object width="257" height="33" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+            <param value="http://www.xiami.com/widget/0_1768983626/singlePlayer.swf" name="movie">
+            <param value="transparent" name="wmode">
+            <param value="high" name="quality">
+            <embed width="257" height="33" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" quality="high" wmode="transparent" menu="false" src="http://www.xiami.com/widget/0_1768983626/singlePlayer.swf">
+        </object>
+        <div class="jjl_caption" style="margin-top:10px;"><p >Luv Letter - DJ OKAWARI</p></div>
+        <a class="permalink-icon" href="http://theme-preview.diandian.com/post/2011-05-17/875401"></a>
+      </li>
+
+
+
+<!--
+                 	
+          <li class="post text">
+                       <h3 class="jjl_title"><a href="http://theme-preview.diandian.com/post/2011-05-17/875269">预览示例文章</a></h3>
+            <div class="jjl_body">
+            	<p><strong>这是一篇示例的文章，以帮助你更直观的预览模板。</strong></p><p>想知道<u>点点网</u>有什么特别的吗？</p><ul><li>高质量的内容社区，找到你的兴趣，展现你的个性</li><li>一系列的发布工具，快速简单就能发布内容</li><li>强大自由的自定义功能，可以让你创作出任何形式的设计</li><li>追求极致的用户体验，简洁舒适的设计</li></ul><p>更多的，还等着你来发现。<br />还等什么？快来试试吧：）</p>
+            </div>
+          </li>
+-->
+
+
+  </ol> <!-- #posts -->
+        
+    <div id="footer">
+ 
+<div class="link">Powered by <a href="http://diandian.com">watsy</a></div>
+        
+    </div> <!-- #footer -->
+    
+    </div> <!-- #content -->
+
+    </div> <!-- #center -->
+
+
+</body>
+</html>

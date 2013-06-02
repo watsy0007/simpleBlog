@@ -1,0 +1,87 @@
+{% load staticfiles %}
+{% load markup %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>simple blog</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="../static/css/109D.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+    <script type="text/javascript" src="../static/js/jquery-1.7-latest.js"></script>
+</head>
+<body>
+
+<div id="center">
+
+    <div id="top">
+        <a href="" id="title"><h1 class="shoutest">watsy's blog</h1></a>
+        <ul id="nav">
+            <a href="/about"><li>关于</li></a>
+        </ul>
+    </div> <!-- #top -->
+
+    <div id="content">
+
+        <ol id="posts">
+
+            {% for blog in blogs.object_list %}
+                <li class="post text">
+                    <h3 class="jjl_title">
+                        <a href="{% url "blog_detail" blog.id %}"><b>{{ blog.title }}</b></a>
+                    </h3>
+                    <div class="jjl_body">
+                        {% autoescape on %}
+                            {{ blog.content | truncatechars:50 | markdown:"safe" }}
+                        {% endautoescape %}
+                    </div>
+                </li>
+            {% endfor %}
+
+            {#      <li class="post audio">#}
+            {#        <object width="257" height="33" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">#}
+            {#            <param value="http://www.xiami.com/widget/0_1768983626/singlePlayer.swf" name="movie">#}
+            {#            <param value="transparent" name="wmode">#}
+            {#            <param value="high" name="quality">#}
+            {#            <embed width="257" height="33" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" quality="high" wmode="transparent" menu="false" src="http://www.xiami.com/widget/0_1768983626/singlePlayer.swf">#}
+            {#        </object>#}
+            {#        <div class="jjl_caption" style="margin-top:10px;"><p >Luv Letter - DJ OKAWARI</p></div>#}
+            {#        <a class="permalink-icon" href="http://theme-preview.diandian.com/post/2011-05-17/875401"></a>#}
+            {#      </li>#}
+
+        </ol> <!-- #posts -->
+
+        <p class="page_container">
+            {% if blogs.has_previous %}
+                <a href="?page={{ blogs.previous_page_number }}" title="上1页"></a>
+            {% endif %}
+            {% for p in page_range %}
+                {% ifequal p blogs.number %}
+                    <span style="font-size:16px;" title="当前页"><b>{{p}}</b></span>
+                {% else %}
+                    <a href="?page={{p}}" title="第{{p}}页">{{p}}</a>
+                {% endifequal %}
+            {% endfor %}
+            {% if blogs.has_next %}
+                <a href="?page= {{ blogs.next_page_number }}" title="下一页"></a>
+            {% endif %}
+            <b>
+                {% if blogs.paginator.num_pages %}
+                    共 {{ blogs.paginator.num_pages }} 页
+                {% endif %}
+            </b>
+        </p>
+
+        <div id="footer">
+
+            <div class="link">Powered by <a href="http://diandian.com">watsy</a></div>
+
+        </div> <!-- #footer -->
+
+    </div> <!-- #content -->
+
+</div> <!-- #center -->
+
+</body>
+</html>

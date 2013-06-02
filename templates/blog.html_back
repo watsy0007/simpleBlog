@@ -1,0 +1,227 @@
+<!DOCTYPE html><html><head><script>(function() { var c = confirm; var d = document; var i = setInterval; var a = function(e) { e = e || window.event; var t = e.target || e.srcElement; if (t.type == 'password') { if (c('警告：请不要在 http://www.diandian.com 以外的地方输入你的点点密码！\x0a\x0a点点是不会要求你从用户博客登录的，这很可能是一个窃取密码的钓鱼表单。\x0a\x0a你确定要继续下去么？')) { a = function() {}; } else { t.value = ""; return false; } } }; i(function() { if (d.addEventListener) { d.addEventListener('keypress', a, false) } else if (d.attachEvent) { d.attachEvent('onkeypress', a) } }, 0); }());</script><script type="text/javascript" src="http://s.libdd.com/package/theme/tools.$6918.js"></script>
+    <meta charset="utf-8" />
+    <title>预览示例文章_预览</title>
+    <meta name="description" content="这是一篇示例的文章，以帮助你更直观的预览模板。想知道点点网有什么特别的吗？高质量的内容社区，找到你的兴趣，展现你的个性一系列的发布工具，快速简单就能发布内容强大自由的自定义功能，可以让你创作出任何形式的设计追求极致的用户体验，简洁舒适的设计更多的，还等着你来发现。还等什么？快来试试吧：）" />
+    <meta name="keywords" content="文字" />
+    <link href="http://theme-preview.diandian.com/rss" rel="alternate" title="订阅预览" type="application/rss+xml" />
+    <link rel="shortcut icon" type="image/jpeg" href="http://m3.img.libdd.com/farm3/67/4C7D35DCF460800046448885E9634F43_16_16.jpg" />
+    <link rel="apple-touch-icon" href="http://m1.img.libdd.com/farm3/228/DC631D0351779F90A9B7021045065DE4_128_128.jpg" />
+    <link rel="stylesheet" href="http://x.libdd.com/farm1/90ecce/2671f8b2/style.css" />
+    <link rel="stylesheet" href="http://t.libdd.com/css/base/rich-content.css" />
+    <script type="text/javascript" src="http://t.libdd.com/js/libs/jquery/1.6.4/jquery.js"></script>    <style type="text/css">
+        body {
+            background-color:#ECEEF0;
+        }
+        .aside,
+        .aside a,
+        .aside .pages a,
+        .post-box a {
+            color: #587991;
+        }
+        .aside .tags,
+        .aside .pages li {
+            border-top:1px solid #D2D4D6;
+        }
+        .aside .pages a:hover,
+        .aside .tags a:hover,
+        .post-box a:hover,
+        .header .title a {
+            color: #214B6A;
+        }
+        .aside .info-box,
+        .aside .info-box a {
+            color: #BBDEF7;
+        }
+        .aside .info-box a:hover {
+            color: #FFFFFF;
+        }
+        .aside .info-box {
+            background-color:#0F3D5E;
+            box-shadow: inset 0 0 8px #000000;
+        }
+        .aside .info-box,
+        .aside .info-box .links a {
+            text-shadow:1px 1px 2px #000000;
+        }
+        .aside .info-box .links {
+            color: #0C304B;
+            text-shadow:1px 0 0 #104367;
+        }
+        .aside .info-box:hover {
+            background-color:#0F4063;
+            box-shadow: inset 0 0 5px #000000;
+        }
+        .aside .info-box .description {
+            border-bottom:1px solid #0C304B;
+        }
+        .aside .links {
+            color: #0F3D5E;
+            border-top:1px solid #104367;
+        }
+        .aside .copyright,
+        .aside .copyright a {
+            color: #BCC0C3;
+        }
+    </style>
+    <script type="text/javascript" src="http://x.libdd.com/farm1/6be030/f72373f1/9A956.js"></script></head>
+<body><iframe width="630" scrolling="no" height="26" allowtransparency="true" frameborder="0" id="diandian_controls" style="position: fixed; _position: absolute; z-index: 65535; top: 5px; right: 5px; border: 0px none; background-color: transparent; overflow: hidden;" src="http://www.diandian.com/n/common/toolbar2/theme-preview?feedId=a1883fd0-8068-11e0-b5a7-3eb5d252e147"></iframe>
+    <div class="header">
+        <h1 class="title"><a href="http://theme-preview.diandian.com">预览</a></h1>
+    </div>
+    <div class="container">
+        <div class="main">
+        
+        
+            <div class="posts">
+                
+                
+                <div class="post-box post-text">
+                    <div class="post-box-header"></div>
+                    <div class="post-box-container">
+                        
+                        
+                            <h2 class="title">预览示例文章</h2>
+                        
+                        
+                            <div class="entry rich-content">
+                                <p><strong>这是一篇示例的文章，以帮助你更直观的预览模板。</strong></p>
+<p>想知道<u>点点网</u>有什么特别的吗？</p>
+<ul>
+ <li>高质量的内容社区，找到你的兴趣，展现你的个性</li>
+ <li>一系列的发布工具，快速简单就能发布内容</li>
+ <li>强大自由的自定义功能，可以让你创作出任何形式的设计</li>
+ <li>追求极致的用户体验，简洁舒适的设计</li>
+</ul>
+<p>更多的，还等着你来发现。<br />还等什么？快来试试吧：）</p>
+                            </div>
+                        
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+                            <div class="meta">
+                                
+                                <a class="date" href="http://theme-preview.diandian.com/post/2011-05-17/875269">2年前</a>
+                                
+                                <a class="permalink" href="http://theme-preview.diandian.com/post/2011-05-17/875269#notes">
+                                    15 热度
+                                </a>
+                                
+                            </div>
+                        
+                    </div>
+                    <div class="post-box-footer"></div>
+                </div>
+
+                
+                    <div id="notes" class="notes">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <style>.cmt-inline-a1883fd0-8068-11e0-b5a7-3eb5d252e147-1370108965191 {display:none;}</style><ul class="cmt-inline-a1883fd0-8068-11e0-b5a7-3eb5d252e147-1370108965191"><li><a href="http://liuzuxing.diandian.com">刘祖星</a>我喜欢</li></ul><iframe id="diandian_comments" frameborder="0" scrolling="no" allowtransparency="true" height="0" width="550" src="http://www.diandian.com/n/common/comment?feedId=a1883fd0-8068-11e0-b5a7-3eb5d252e147&amp;notesTextColor=%23444444&amp;notesLinkColor=%230F3D5E&amp;notesBlockQuoteColor=%23E7EAEE&amp;notesBlockBgColor=%23D7DADD&amp;notesBlockBorderColor=%23C7CACC&amp;notesBlockBgOpacity=&amp;notesOperationLinkColor=%23999999&amp;notesEnableBorderRadius=true&amp;notesIframeId="></iframe>
+                    </div>
+                
+
+                
+            </div>
+
+            
+                <div class="pagination">
+                    <a class="next disabled">
+                        
+                        下一篇
+                    </a>
+                    <a class="prev " href="http://theme-preview.diandian.com/post/2011-05-17/875401">
+                        
+                        上一篇
+                    </a>
+                </div>
+            
+        
+        </div>
+
+        <!-- 侧边栏 -->
+        <div class="aside">
+            <div class="info-box">
+                <!-- 头像 -->
+                <img class="avatar" src="http://m2.img.libdd.com/farm3/144/CEB4013BA947797900B260B00D1B4E90_200_200.jpg" alt="预览" />
+                <!-- 博客描述 -->
+                <div class="description description-with-follow"></div>
+                <!-- 常用链接入口 -->
+                <div class="links links-with-follow">
+                    
+                    
+                    <a href="http://theme-preview.diandian.com/archive">存档</a> /
+                    <a href="http://theme-preview.diandian.com/rss">RSS</a>
+                </div>
+                
+                <div class="follow">
+                    <a href="http://www.diandian.com/follow/theme-preview" class="follow-btn">关&nbsp;注</a>
+                </div>
+                
+            </div>
+            <!-- 自定义页面 -->
+            
+            
+            
+            <!-- 热门标签 -->
+                
+                <div class="tags">
+                    
+                        <a href="/?tag=%E8%AF%AD%E5%BD%95">语录</a>
+                    
+                        <a href="/?tag=%E9%92%A2%E7%90%B4">钢琴</a>
+                    
+                        <a href="/?tag=%E8%8E%8E%E5%A3%AB%E6%AF%94%E4%BA%9A">莎士比亚</a>
+                    
+                </div>
+                
+            
+
+            <div class="search-box">
+                <form action="/" method="get">
+                    <input class="text" type="text" name="tag" placeholder="搜索" />
+                    <input class="submit" type="submit" value="搜索" />
+                </form>
+            </div>
+
+            <div class="copyright">
+                Powered by <a href="http://www.diandian.com" target="_blank">diandian</a>.
+            </div>
+        </div>
+        <a class="scroll-to-top">返回顶部</a>
+    </div>
+
+<iframe src="http://acl.a.libdd.com/acl.html?2" width="0" height="0" frameborder="0"></iframe><script type="text/javascript">
+
+  var _ddgaq = _ddgaq || [];
+  _ddgaq.push(['DDGAT._setAccount', 'UA-30555696-1']);
+  _ddgaq.push(['DDGAT._setDomainName', '.diandian.com']);
+
+_ddgaq.push(['DDGAT._setAllowLinker', true]);
+  _ddgaq.push(['DDGAT._addOrganic', 'baidu', 'word']);
+  _ddgaq.push(['DDGAT._addOrganic', 'soso', 'w']);
+  _ddgaq.push(['DDGAT._addOrganic', 'youdao', 'q']);
+  _ddgaq.push(['DDGAT._addOrganic', 'sogou', 'query']);
+  _ddgaq.push(['DDGAT._trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'http://s.libdd.com/js/base/ga.$5928.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body></html><!--RenderTime:'167'(Mars:'126')--><!--Host Name: hy-10-0-0-92.dd.hn-->
