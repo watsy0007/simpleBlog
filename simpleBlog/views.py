@@ -3,9 +3,24 @@ __author__ = 'watsy'
 
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render_to_response
-from simpleBlog.models import dbBlog
+import simpleBlog.models
+from simpleBlog.models import dbBlog ,dbLoginKey
 from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
+from django.core.exceptions import ObjectDoesNotExist
 
+from django.utils import timezone
+from django.utils import simplejson
+from django.core import serializers
+from django.views.decorators.csrf import csrf_exempt
+import json
+from  django.contrib.auth import authenticate
+from django.contrib.auth.models import User
+from apiObj import API_Object
+import hashlib
+import datetime
+import settings
+
+#web
 def index(request):
 
     #确保按照最后添加的在最前的顺序显示
@@ -74,3 +89,127 @@ def blog(request, blogId):
         }
 
     )
+
+
+
+#api
+def isUserLogined(userId, token):
+    login = dbLoginKey.objects.get(userID=str(userId), token = str(token))
+    #登录过
+    if login is not None:
+        #时间没超过1天
+        print login.last_date
+        print login.last_date.utctimetuple()
+
+        if (login.last_date - timezone.now()).days == 0:
+            login.last_date = datetime.datetime.utcnow()
+            login.save()
+            return True
+        else:
+            login.delete()
+
+    return False
+
+#api
+#客户端提交的post如果不加这段，会出现403error
+@csrf_exempt
+def api_blogs(request):
+    if request.method == 'POST' and request.POST['page']:
+        int_page = int(request.POST['page'])
+    else:
+        int_page = 1
+
+    blogs = dbBlog.objects.order_by('-created_date').all()
+
+    page_size = 10
+
+    paginator = Paginator(blogs, page_size)
+
+    try:
+        blogs = paginator.page(int_page)
+    except(EmptyPage, InvalidPage, PageNotAnInteger):
+        blogs = paginator.page(1)
+
+    try:
+        return_json = serializers.serialize('json',blogs.object_list)
+    except :
+        return_json = {
+            'status': 1,
+            'msg' : '提取blog异常'
+        }
+
+    return HttpResponse(
+        return_json
+    )
+
+@csrf_exempt
+def api_login(request):
+    json_login = {}
+    json_api = API_Object(0)
+
+    if request.method == 'POST':
+        if request.POST['username'] and request.POST['password']:
+            user = authenticate(username = request.POST['username'], password = request.POST['password'])
+            if user is not None:
+
+
+                try:
+                    loginUser  = dbLoginKey.objects.get(userID = user.id)
+                    if loginUser is None:
+                        raise ObjectDoesNotExist
+                except ObjectDoesNotExist:
+                    loginUser = dbLoginKey()
+
+                loginUser.token = hashlib.md5().hexdigest()
+
+                loginUser.last_date = datetime.datetime.utcnow()
+                loginUser.userID = user.id
+                loginUser.save()
+                json_login['userid'] = user.id
+                json_login['token'] = loginUser.token
+
+    json_api.datas = json_login
+    return HttpResponse(
+        json_api.json_data('userObj')
+    )
+
+
+#add blog
+@csrf_exempt
+def api_addBlog(request):
+
+    return_json = {}
+    json_api = API_Object(0)
+
+    #需要提交
+    #userid token title content device
+    if request.method == 'POST':
+        if request.POST['userid'] and request.POST['token']:
+            userid =     request.POST['userid']
+            token =     request.POST['token']
+            #校验
+            if isUserLogined(userid, token):
+                #提交
+                if request.POST['title'] and request.POST['content']:
+                    insert_blog = dbBlog()
+                    insert_blog.title = request.POST['title']
+                    insert_blog.content = request.POST['content']
+                    insert_blog.visitCount = 0
+
+                    if str(request.POST['device']).lower() == 'iphone':
+                        insert_blog.deviceType = 1
+                    elif str(request.POST['device']).lower() == 'ipad':
+                        insert_blog.deviceType = 2
+                    elif str(request.POST['device']).lower() == 'android':
+                        insert_blog.deviceType = 3
+                    else:
+                        insert_blog.deviceType = 0
+
+                    dbBlog.save(insert_blog)
+                    json_api.status = 1
+
+
+    return HttpResponse(json_api.json_data())
+
+
+

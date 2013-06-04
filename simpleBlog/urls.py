@@ -4,7 +4,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
-from views import index, blog
+from views import index, blog, api_blogs, api_login, api_addBlog
 
 urlpatterns = patterns('',
     # Examples:
@@ -17,6 +17,12 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
+    #api
+    url(r'^api/login$', view=api_login),
+    url(r'^api/addblog$', view=api_addBlog),
+    url(r'^api/blogs$', view= api_blogs),
+
+    #web
     #blog detail
     url(r'^blog/(\d+)', view=blog , name='blog_detail'),
     #index

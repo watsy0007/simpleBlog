@@ -1,0 +1,77 @@
+10
+
+dir
+7320
+svn://root@whatsbug.com:1983/repos/BeeFramework/framework/BeeFramework/MVC
+svn://root@whatsbug.com:1983/repos
+
+
+
+2013-05-02T13:01:31.314819Z
+7320
+root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+65ff5efd-1f63-4043-91d8-975097d1d72f
+
+Model
+dir
+
+Controller
+dir
+
+Bee_MVC.h
+file
+
+
+
+
+2013-04-21T06:18:21.000000Z
+588a0ee93a2678d3a69a1375a1b76fd4
+2013-04-23T11:54:30.186239Z
+7307
+root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1639
+
+ViewLayout
+dir
+
+View
+dir
+
+ViewController
+dir
+

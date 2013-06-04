@@ -1,0 +1,14 @@
+PODS:
+  - AttributedMarkdown (0.9.0)
+
+DEPENDENCIES:
+  - AttributedMarkdown (from `https://github.com/dreamwieber/AttributedMarkdown.git`)
+
+EXTERNAL SOURCES:
+  AttributedMarkdown:
+    :git: https://github.com/dreamwieber/AttributedMarkdown.git
+
+SPEC CHECKSUMS:
+  AttributedMarkdown: dec3931152ba5afc06f083214745bce896c11bd9
+
+COCOAPODS: 0.19.1
