@@ -1,3 +1,25 @@
+###version 0.2   
+
+ios 端采用第三方类库:   
+    [beeFramework]('https://github.com/gavinkwoe/BeeFramework')   
+    [AttributedMarkdown]('https://github.com/dreamwieber/AttributedMarkdown')   
+    
+    
+增加   
+
+1. api       
+    1. 登录   
+    2. 发表博客   
+    3. 获取博客列表   
+2. ios客户端     
+   1. 登录   
+   2. 查看博客列表   
+   3. 查看博客-支持mardown   
+   4. 增加博客   
+
+
+###version 0.1   
+
 感谢   
 www.diandian.com   
 模版部分是从diandian.com里面拿。然后去掉一些直接用的。   
