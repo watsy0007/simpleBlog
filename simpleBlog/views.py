@@ -114,6 +114,9 @@ def isUserLogined(userId, token):
 #客户端提交的post如果不加这段，会出现403error
 @csrf_exempt
 def api_blogs(request):
+
+    json_api = API_Object(0)
+
     if request.method == 'POST' and request.POST['page']:
         int_page = int(request.POST['page'])
     else:
@@ -131,15 +134,18 @@ def api_blogs(request):
         blogs = paginator.page(1)
 
     try:
-        return_json = serializers.serialize('json',blogs.object_list)
+
+        json_api.datas = serializers.serialize('json',blogs.object_list)
+        json_api.status = 1
     except :
-        return_json = {
-            'status': 1,
-            'msg' : '提取blog异常'
-        }
+
+        json_api.errcode = 1000
+
+
+
 
     return HttpResponse(
-        return_json
+        json_api.json_data('blogs')
     )
 
 @csrf_exempt
@@ -151,7 +157,6 @@ def api_login(request):
         if request.POST['username'] and request.POST['password']:
             user = authenticate(username = request.POST['username'], password = request.POST['password'])
             if user is not None:
-
 
                 try:
                     loginUser  = dbLoginKey.objects.get(userID = user.id)
@@ -168,7 +173,10 @@ def api_login(request):
                 json_login['userid'] = user.id
                 json_login['token'] = loginUser.token
 
+                json_api.status = 1
+
     json_api.datas = json_login
+
     return HttpResponse(
         json_api.json_data('userObj')
     )
@@ -183,12 +191,14 @@ def api_addBlog(request):
 
     #需要提交
     #userid token title content device
+
     if request.method == 'POST':
         if request.POST['userid'] and request.POST['token']:
             userid =     request.POST['userid']
             token =     request.POST['token']
             #校验
             if isUserLogined(userid, token):
+
                 #提交
                 if request.POST['title'] and request.POST['content']:
                     insert_blog = dbBlog()
