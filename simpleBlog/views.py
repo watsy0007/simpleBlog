@@ -117,7 +117,7 @@ def api_blogs(request):
 
     json_api = API_Object(0)
 
-    if request.method == 'POST' and request.POST['page']:
+    if request.method == 'POST' and request.POST.get('page'):
         int_page = int(request.POST['page'])
     else:
         int_page = 1
@@ -154,7 +154,7 @@ def api_login(request):
     json_api = API_Object(0)
 
     if request.method == 'POST':
-        if request.POST['username'] and request.POST['password']:
+        if request.POST.get('username') and request.POST.get('password'):
             user = authenticate(username = request.POST['username'], password = request.POST['password'])
             if user is not None:
 
@@ -193,25 +193,29 @@ def api_addBlog(request):
     #userid token title content device
 
     if request.method == 'POST':
-        if request.POST['userid'] and request.POST['token']:
+        if request.POST.get('userid') and request.POST.get('token'):
             userid =     request.POST['userid']
             token =     request.POST['token']
             #校验
             if isUserLogined(userid, token):
 
                 #提交
-                if request.POST['title'] and request.POST['content']:
+
+                if request.POST.get('title') and request.POST.get('content'):
                     insert_blog = dbBlog()
                     insert_blog.title = request.POST['title']
                     insert_blog.content = request.POST['content']
                     insert_blog.visitCount = 0
 
-                    if str(request.POST['device']).lower() == 'iphone':
-                        insert_blog.deviceType = 1
-                    elif str(request.POST['device']).lower() == 'ipad':
-                        insert_blog.deviceType = 2
-                    elif str(request.POST['device']).lower() == 'android':
-                        insert_blog.deviceType = 3
+                    if request.POST.get('device'):
+                        if str(request.POST['device']).lower() == 'iphone':
+                            insert_blog.deviceType = 1
+                        elif str(request.POST['device']).lower() == 'ipad':
+                            insert_blog.deviceType = 2
+                        elif str(request.POST['device']).lower() == 'android':
+                            insert_blog.deviceType = 3
+                        else:
+                            insert_blog.deviceType = 0
                     else:
                         insert_blog.deviceType = 0
 

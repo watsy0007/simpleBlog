@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+    <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal"
+            >
+        <TextView
+            android:id="@+id/txViewMsg"
+            android:layout_height="wrap_content"
+            android:text="unlogin"
+            android:layout_width="wrap_content"
+            ></TextView>
+        <Button
+                android:id="@+id/btnLogin"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:layout_width="wrap_content"></Button>
+
+        <Button
+                android:id="@+id/btnAddBlog"
+                android:layout_height="wrap_content"
+                android:text="add Blog"
+                android:layout_width="wrap_content"
+                ></Button>
+    </LinearLayout>
+
+    <ListView
+
+            android:id="@+id/blogsView"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:background="#68686868"
+            >
+
+    </ListView>
+
+</LinearLayout>
+
